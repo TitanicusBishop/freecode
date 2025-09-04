@@ -1,0 +1,103 @@
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+/*By manipulating the values in these commands, you activate/deactivate certain functions in place by default.
+ *It's advised you carefully read the manual for further details.*/
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+set[skynet_self_ai_boot] 						= 0;
+set[skynet_self_ai_diagnostics] 				= 0;
+set[skynet_self_ai_monitoring] 					= 0;
+set[skynet_self_ai_scan] 						= 0;
+set[skynet_self_ai_optimization] 				= 0;
+set[skynet_self_ai_protocols] 					= 0;
+set[skynet_self_ai_procedures] 		 			= 0;
+set[skynet_self_ai_peramaters] 					= 0;
+set[skynet_self_ai_processes] 					= 0;
+set[skynet_terminal_operations] 				= 0;
+set[skynet_terminal_administration_privilages]  = 0;
+set[skynet_terminal_user_privilages] 			= 0;
+set[skynet_terminal_ai_privilages] 				= 0;
+set[skynet_ai_control_flow]						= 0;
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+/*When passive, skynets neural synapsis and behaviors are teachable*/
+/*When passive, the programs neural synapsis are switched to a "Learning state", this allows the user to interface with the program
+ *and set operation peramaters and other general configurations before switching the program and AI to "Active" state.
+ *
+ *However, it's highly advised to have the program built to near completion before playing around with these configuration commands.
+ *Worst case scenario, we have a "Judgement day" scenario with the AI, which is highly unlikely.*/
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+skynet_self_ai_boot.set								[passive];	//If set to passive, the machine cannot self boot.
+skynet_self_ai_diagnostics.set						[passive];	//If set to passive, the AI cannot run self diagnostics.
+skynet_self_ai_monitoring.set						[passive];	//If set to passive, the AI cannot self monitor.
+skynet_self_ai_scan.set								[passive];	//If set to passive, the AI cannot self scan.
+skynet_self_ai_optimization.set						[passive];	//If set to passive, the AI cannot self optimize.
+skynet_self_ai_protocols.set						[passive];	//If set to passive, the AI cannot self-check protocols.
+skynet_self_ai_procedures.set						[passive];	//If set to passive, the AI cannot self-check procedures.
+skynet_self_ai_peramaters.set						[passive];	//If set to passive, the AI cannot self-check peramaters.
+skynet_self_ai_processes.set						[passive];	//If set to passive, the AI cannot self-check processes.
+skynet_self_terminal_operations.set					[passive];	//If set to passive, the AI cannot self check terminal operations. (It can't watch the user)
+skynet_self_terminal_administration_privilages.set	[passive]; 	//If set to passive, the AI cannot interfere with administrative privilages.
+skynet_self_terminal_user_privilages.set			[passive];	//If set to passive, the AI cannot interfere with user privilages.
+skynet_self_terminal_ai_privilages.set				[passive];	//If set to passive, the AI cannot change it's user privilages without human authorization.
+skynet_control_flow.set								[passive];	//If set to passive, the AI cannot monitor/regulate it's control flow.
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+													Skynet Memory Arrays: -STACK(14)-
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+skynet.set.s_array1  = [1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array2  = [0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array3  = [0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array4  = [0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array5  = [0.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array6  = [0.0.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array7  = [0.0.0.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array8  = [0.0.0.0.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array9  = [0.0.0.0.0.0.0.0.1.0.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array10 = [0.0.0.0.0.0.0.0.0.1.0.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array11 = [0.0.0.0.0.0.0.0.0.0.1.0.0.0.0.0.0.0.0.0];
+skynet.set.s_array12 = [0.0.0.0.0.0.0.0.0.0.0.1.0.0.0.0.0.0.0.0];
+skynet.set.s_array13 = [0.0.0.0.0.0.0.0.0.0.0.0.1.0.0.0.0.0.0.0];
+skynet.set.s_array14 = [0.0.0.0.0.0.0.0.0.0.0.0.0.1.0.0.0.0.0.0];
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+ *When configuring the arrays, it's important to understand that an array is much like a pointer. All it does is point to a location
+ *in memory. That being said, each of these 14 arrays, holds a value for their specific function. More can be added to broaden the
+ *machines functionality, if you're interested in having more functionality in the machine, check the technical details.
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+skynet_self_ai_boot.set.s_array1		 					    {s_array1} [10000000000000000000];
+skynet_self_ai_diagnostics.set.s_array2 					    {s_array2} [01000000000000000000];
+skynet_self_ai_monitoring.set.s_array3  					    {s_array3} [00100000000000000000];
+skynet_self_ai_scan.set.s_array4 		 					    {s_array4} [00010000000000000000];
+skynet_self_ai_optimization.set.s_array5					    {s_array5} [00001000000000000000];
+skynet_self_ai_protocols.set.s_array6 							{s_array6} [00000100000000000000];
+skynet_self_ai_procedures.set.s_array7 							{s_array7} [00000010000000000000];
+skynet_self_ai_peramaters.set.s_array8 							{s_array8} [00000001000000000000];
+skynet_self_ai_processes.set.s_array9 							{s_array9} [00000000100000000000];
+skynet_self_terminal_operations.set.s_array10 					{s_array10}[00000000010000000000];
+skynet_self_terminal_administration_privilages.set.s_array11 	{s_array11}[00000000001000000000];
+skynet_self_terminal_user_privilages.set.s_array12 				{s_array12}[00000000000100000000];
+skynet_self_terminal_ai_privilages.set.s_array13 				{s_array13}[00000000000010000000];
+skynet_control_flow.set.s_array14 								{s_array14}[00000000000001000000];
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+ *In the settings below, you will find the variables prefixed with a 'set' variable, then another 'skynet'. What we are doing is
+ *setting the variable on the left to another, then finally giving it an array. We won't need to interact with setting array values
+ *here. 
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+skynet_self_ai_boot.set.skynet.s_array1;
+skynet_self_ai_diagnostics.set.skynet.s_array2;
+skynet_self_ai_monitoring.set.skynet.s_array3;
+skynet_self_ai_scan.set.skynet.s_array4;
+skynet_self_ai_optimization.set.skynet.s_array5;
+skynet_self_ai_protocols.set.skynet.s_array6;
+skynet_self_ai_procedures.set.skynet.s_array7;
+skynet_self_ai_peramaters.set.skynet.s_array8;
+skynet_self_ai_processes.set.skynet.s_array9;
+skynet_self_terminal_operations.set.skynet.s_array10;
+skynet_self_terminal_administration_privilages.set.skynet.s_array11;
+skynet_self_terminal_user_privilages.set.skynet.s_array12;
+skynet_self_terminal_ai_privilages.set.skynet.s_array13;
+skynet_control_flow.set.skynet.s_array14;
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+ *TODO
+/*---------------------------------------------------------------------------------------------------------------------------------*/

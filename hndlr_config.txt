@@ -1,0 +1,22 @@
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+ *
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+set.handler.skynet.skynet_self_ai_boot.check.self[1];
+set.handler.skynet.skynet_self_ai_diagnostics.check.self[1];
+set.handler.skynet.skynet_self_ai_scan.check.self[1];
+set.handler.skynet.skynet_self_ai_monitoring.check.self[1];
+set.handler.skynet.skynet_self_ai_optimization.check.self[1];
+set.handler.skynet.skynet_self_ai_protocols.check.self[1];
+set.handler.skynet.skynet_self_ai_procedures.check.self[1];
+set.handler.skynet.skynet_self_ai_peramaters.check.self[1];
+set.handler.skynet.skynet_self_ai_processes.check.self[1];
+set.handler.skynet.skynet_self_terminal_operations.check.self[1];
+set.handler.skynet.skynet_self_terminal_administration_privilages.set.skynet.check.self[1];
+set.handler.skynet.skynet_self_terminal_user_privilages.check.self[1];
+set.handler.skynet.skynet_self_terminal_ai_privilages.check.self[1];
+set.handler.skynet.skynet_control_flow.check.self[1];
+
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+ *
+/*---------------------------------------------------------------------------------------------------------------------------------*/
+
